@@ -1,0 +1,253 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact Us",
+    "requestService": "Request Service"
+  },
+  "home": {
+    "badge": "Best Maintenance & Installation Services in Jeddah 🏆",
+    "title": "Technical & Electrical Solutions",
+    "titleHighlight": "Integrated & Reliable",
+    "subtitle": "We reach every inch and neighborhood inside Jeddah anywhere, just send the location. From electrical plumbing to the latest smart network systems. We provide our services with high professionalism and quality assurance for the safety and peace of mind of our clients.",
+    "cta": "Request Service Now",
+    "explore": "Explore Services",
+    "features": {
+      "f1Title": "Professional Execution",
+      "f1Desc": "A specialized technical team equipped with the latest tools.",
+      "f2Title": "Service Guarantee",
+      "f2Desc": "We provide a real guarantee on all our installation and maintenance work.",
+      "f3Title": "Fast Response",
+      "f3Desc": "We value your time and commit to arriving on time."
+    },
+    "emergencyTitle": "Facing an Emergency?",
+    "emergencyDesc": "Contact us now via WhatsApp and we will send a specialized technician as soon as possible.",
+    "emergencyBtn": "Chat on WhatsApp",
+    "detailedServices": {
+      "title": "Comprehensive Services in",
+      "titleHighlight": "Jeddah City",
+      "desc": "We cover all neighborhoods of Jeddah to provide a complete package of technical services that meet all your residential and commercial needs.",
+      "cats": {
+        "electrical": {
+          "title": "Electrical Services",
+          "items": ["Home & Villa Wiring", "Electrical Troubleshooting", "Circuit Breaker Installation", "Load Distribution", "Panel Installation"]
+        },
+        "network": {
+          "title": "Network & Internet",
+          "items": ["Internet Cable Extension", "Router & Switch Setup", "Cabinet Organization", "Network Troubleshooting", "Network Points Setup"]
+        },
+        "surveillance": {
+          "title": "Surveillance Systems",
+          "items": ["CCTV Installation", "DVR & NVR Setup", "Maintenance & Monitoring"]
+        },
+        "plumbing": {
+          "title": "Plumbing",
+          "items": ["Leak Repair", "Mixer Installation", "Water Filters Setup", "General Plumbing Maintenance"]
+        },
+        "lighting": {
+          "title": "Lighting & Decor",
+          "items": ["LED Installation", "Hidden Lighting", "Wood Alternative", "Marble Alternative"]
+        },
+        "interior": {
+          "title": "Interior Decor",
+          "items": ["Modern Decor Design", "Wall Cladding", "Suspended & Gypsum Ceilings"]
+        },
+      "additional": {
+          "title": "Additional Services",
+          "items": ["TV Mounting", "TV Stand Installation", "Various Home Maintenance"]
+        }
+      }
+    },
+    "howWeWork": {
+      "subtitle": "OUR PROCESS",
+      "title": "How We Work?",
+      "desc": "We designed a clear and smooth workflow to ensure you receive exceptional service with full transparency and reliability, from the first moment until you receive the warranty.",
+      "steps": {
+        "s1": {
+          "title": "Request Service",
+          "desc": "Easily contact us and accurately specify the required service and location."
+        },
+        "s2": {
+          "title": "Inspection & Evaluation",
+          "desc": "Our team visits you to evaluate the work and transparently determine the final cost."
+        },
+        "s3": {
+          "title": "Professional Execution",
+          "desc": "We start working immediately using the latest equipment and the best technicians."
+        },
+        "s4": {
+          "title": "Receive Warranty",
+          "desc": "We deliver the completed work to you with a comprehensive documented warranty on service quality."
+        }
+      }
+    },
+    "projects": {
+      "title": "Our Featured Projects",
+      "subtitle": "Browse the latest projects we have implemented",
+      "empty": "No projects added yet."
+    },
+    "testimonials": {
+      "title": "Our Clients' Testimonials",
+      "subtitle": "We are proud of our clients' trust, and this is what they say about our services.",
+      "addBtn": "Add Your Review",
+      "verified": "Verified ✔",
+      "empty": "Be the first to add a review about our services!"
+    }
+  },
+  "services": {
+    "title": "Our Professional",
+    "titleHighlight": "Services",
+    "subtitle": "A complete range of tech and electrical solutions designed for your needs.",
+    "startFrom": "Starts from",
+    "currency": "SAR",
+    "orderNow": "Order Now",
+    "ctaTitle": "Need a Custom Consultation?",
+    "ctaDesc": "Our team is ready to answer your inquiries and provide the best solutions.",
+    "ctaBtn": "Contact Us Now"
+  },
+  "portfolio": {
+    "title": "Our",
+    "titleHighlight": "Portfolio",
+    "subtitle": "Browse our latest projects. We take pride in our quality and attention to detail.",
+    "all": "All",
+    "empty": "No projects in this category currently.",
+    "comingSoon": "Image Coming Soon"
+  },
+  "contact": {
+    "title": "Request",
+    "titleHighlight": "Your Service",
+    "titleAfter": "Now",
+    "subtitle": "We are here to serve you. Fill the form below or contact us directly.",
+    "infoTitle": "Contact Information",
+    "phone": "Phone",
+    "whatsapp": "Direct WhatsApp",
+    "whatsappLink": "Click here to chat",
+    "location": "Location & Hours",
+    "locationValue": "Jeddah - Kingdom of Saudi Arabia",
+    "hours": "Working Hours",
+    "hoursValue": "24 Hours / 7 Days",
+    "email": "Email",
+    "success": "Request Sent Successfully!",
+    "successDesc": "We will contact you shortly to confirm details.",
+    "formName": "Full Name",
+    "formPhone": "Phone Number",
+    "formService": "Service Type",
+    "formServiceSelect": "Select a service...",
+    "formLocation": "District / Location",
+    "formDesc": "Problem Description",
+    "formSubmit": "Send Request",
+    "formLoading": "Sending...",
+    "socialTitle": "Follow Us"
+  },
+  "footer": {
+    "about": "Your first choice for tech and electrical solutions in Jeddah. Quality and professionalism guaranteed.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "social": "Follow Us",
+    "copyright": "Future Pioneers Solutions. All rights reserved.",
+    "madeWith": "Coded with ❤️ to serve you"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "logout": "Logout",
+    "nav": {
+      "home": "Overview",
+      "orders": "Orders",
+      "projects": "Projects",
+      "services": "Services",
+      "settings": "Settings"
+    },
+    "header": {
+      "title": "Future Pioneers Management",
+      "viewSite": "View Site"
+    },
+    "overview": {
+      "title": "System Overview",
+      "totalOrders": "Total Orders",
+      "pendingOrders": "Pending Orders",
+      "completedOrders": "Completed Orders",
+      "projects": "Published Projects",
+      "services": "Available Services",
+      "details": "View Details",
+      "recentActivity": "Recent Orders (Activity)",
+      "quickActions": "Quick Actions",
+      "addNewProject": "Add New Project",
+      "viewPendingOrders": "Review Pending Orders",
+      "addNewService": "Add New Service"
+    },
+    "orders": {
+      "title": "Orders Management",
+      "refresh": "Refresh Orders",
+      "refreshing": "Refreshing...",
+      "empty": "No orders currently",
+      "status": {
+        "new": "New",
+        "pending": "Pending",
+        "in_progress": "In Progress",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      },
+      "table": {
+        "orderId": "Order ID",
+        "customer": "Customer",
+        "service": "Service",
+        "date": "Date",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "actions": {
+        "whatsapp": "WhatsApp Message"
+      }
+    },
+    "projects": {
+      "title": "Projects Management (Portfolio)",
+      "addBtn": "Add Project",
+      "refreshBtn": "Refresh",
+      "empty": "No projects yet. Click 'Add Project' to start.",
+      "publishing": "Publishing...",
+      "modal": {
+        "title": "Add New Project",
+        "nameLabel": "Project Name *",
+        "namePlaceholder": "e.g., Full Villa Installation...",
+        "categoryLabel": "Category *",
+        "categoryPlaceholder": "e.g., Electrical, Plumbing, Smart Home...",
+        "mediaLabel": "Project Media",
+        "uploadPhone": "Upload from Phone",
+        "uploadUrl": "External URL (Instagram)",
+        "fileHelp": "Images and short videos allowed (Max 10MB)",
+        "urlPlaceholder": "https://instagram.com/p/...",
+        "detailsLabel": "Work Details *",
+        "detailsPlaceholder": "Write details of what was accomplished...",
+        "cancel": "Cancel",
+        "submit": "Save & Publish"
+      }
+    },
+    "services": {
+      "title": "Services Management",
+      "addBtn": "Add Service",
+      "refreshBtn": "Refresh",
+      "empty": "No services yet. Click 'Add Service' to start.",
+      "status": {
+        "active": "Active (Visible)",
+        "inactive": "Inactive",
+        "hiddenBadge": "Hidden"
+      },
+      "startsFrom": "Starts from",
+      "currency": "SAR",
+      "modal": {
+        "title": "Add New Service",
+        "nameLabel": "Service Name *",
+        "namePlaceholder": "e.g., Electrical Maintenance...",
+        "priceLabel": "Starting Price (Optional)",
+        "iconLabel": "Icon Name *",
+        "iconPlaceholder": "Zap, Wifi, Wrench...",
+        "statusLabel": "Status",
+        "descLabel": "Service Description *",
+        "descPlaceholder": "Write an attractive description...",
+        "cancel": "Cancel",
+        "submit": "Save & Publish"
+      }
+    }
+  }
+}
