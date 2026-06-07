@@ -80,7 +80,10 @@ export default function Portfolio() {
               const getImageUrl = (path: string | null) => {
                 if (!path) return null;
                 if (path.startsWith('http')) return path;
-                if (path.startsWith('/storage')) return `http://127.0.0.1:8000${path}`;
+                if (path.startsWith('/storage')) {
+                  const baseUrl = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api').replace('/api', '');
+                  return `${baseUrl}${path}`;
+                }
                 return path;
               };
               const imageUrl = getImageUrl(project.image_path);

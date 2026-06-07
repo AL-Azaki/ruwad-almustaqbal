@@ -215,7 +215,10 @@ export default function AdminProjects() {
             if (path.startsWith('http')) return path;
             // Prevent browser caching issues for newly uploaded images without causing re-render flickering
             const cacheBuster = typeof project.updated_at === 'string' ? new Date(project.updated_at).getTime() : project.id;
-            if (path.startsWith('/storage')) return `http://127.0.0.1:8000${path}?v=${cacheBuster}`;
+            if (path.startsWith('/storage')) {
+              const baseUrl = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000/api').replace('/api', '');
+              return `${baseUrl}${path}?v=${cacheBuster}`;
+            }
             return path;
           };
           const imageUrl = getImageUrl(project.image_path);
