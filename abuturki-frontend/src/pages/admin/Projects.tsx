@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Loader2, Plus, RefreshCw, Briefcase, Image as ImageIcon, Trash2 } from 'lucide-react';
+import { Loader2, Plus, RefreshCw, Image as ImageIcon, Trash2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import toast from 'react-hot-toast';
 import api from '../../lib/api';
