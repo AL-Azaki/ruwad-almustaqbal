@@ -6,10 +6,14 @@ import App from './App.tsx'
 
 import { SettingsProvider } from './contexts/SettingsContext'
 
+import { HelmetProvider } from 'react-helmet-async'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <SettingsProvider>
-      <App />
-    </SettingsProvider>
+    <HelmetProvider>
+      <SettingsProvider>
+        <App />
+      </SettingsProvider>
+    </HelmetProvider>
   </StrictMode>,
 )

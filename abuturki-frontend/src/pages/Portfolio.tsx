@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Maximize2, Loader2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import api from '../lib/api';
 
 interface ProjectType {
@@ -41,6 +42,11 @@ export default function Portfolio() {
 
   return (
     <div className="bg-white dark:bg-gray-900 py-16 min-h-screen transition-colors duration-300">
+      <Helmet>
+        <title>معرض الأعمال | رواد المستقبل - مشاريعنا في جدة</title>
+        <meta name="description" content="تصفح معرض أعمال شركة رواد المستقبل في جدة للخدمات التقنية: مشاريع تركيب كاميرات، تمديد شبكات، وتأسيس كهرباء بأحدث التقنيات." />
+        <meta name="keywords" content="معرض أعمال, سابقة أعمال, مشاريع تقنية, مشاريع شبكات, كاميرات مراقبة, جدة, رواد المستقبل" />
+      </Helmet>
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">

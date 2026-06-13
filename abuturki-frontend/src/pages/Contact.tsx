@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Phone, MapPin, Mail, MessageCircle, Send, Loader2, Ghost, User, Wrench, AlignLeft } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import { useSettings } from '../contexts/SettingsContext';
 import api from '../lib/api';
 
@@ -77,6 +78,11 @@ export default function Contact() {
 
   return (
     <div className="bg-gray-50 dark:bg-gray-900 py-16 min-h-screen transition-colors duration-300">
+      <Helmet>
+        <title>تواصل معنا | رواد المستقبل - لطلب خدمات الصيانة التقنية في جدة</title>
+        <meta name="description" content="اتصل بشركة رواد المستقبل لطلب خدمات تأسيس الكهرباء، الشبكات، كاميرات المراقبة، والديكور في مدينة جدة. نحن في خدمتك بأعلى احترافية." />
+        <meta name="keywords" content="تواصل معنا, رقم شركة كهرباء جدة, تركيب كاميرات جدة, مهندس شبكات جدة, صيانة منزلية, رواد المستقبل" />
+      </Helmet>
       <div className="container mx-auto px-4">
         
         {/* Header Section */}

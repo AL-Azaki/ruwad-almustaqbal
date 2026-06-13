@@ -7,6 +7,7 @@ import {
   PhoneCall, Search, Settings, ShieldCheck, Quote,
   MessageSquarePlus, X
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../contexts/SettingsContext';
 import api from '../lib/api';
@@ -105,6 +106,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen dark:bg-gray-900 transition-colors duration-300">
+      <Helmet>
+        <title>رواد المستقبل | الرئيسية - أفضل خدمات التقنية والصيانة في جدة</title>
+        <meta name="description" content="شركة رواد المستقبل في جدة تقدم خدمات كهربائية، تمديد شبكات، كاميرات مراقبة، سباكة، بديل رخام وخشب، وديكورات بأعلى المعايير." />
+        <meta name="keywords" content="الخدمات الكهربائية, تأسيس كهرباء للمنازل والفلل, صيانة الأعطال الكهربائية, تركيب القواطع الكهربائية, توزيع الأحمال الكهربائية, تركيب لوحات الكهرباء, خدمات الشبكات والإنترنت, تمديد شبكات الإنترنت, تركيب الراوترات والسويتشات, تنظيم الشبكات والكبائن, معالجة مشاكل الشبكات, تركيب نقاط الشبكة, أنظمة المراقبة, تركيب كاميرات المراقبة, تركيب أجهزة التسجيل DVR و NVR, السباكة, إصلاح التسريبات, تركيب الخلاطات, تركيب فلاتر المياه, صيانة السباكة المنزلية, الإنارة والديكور, تركيب الليدات, الإنارة المخفية, البديل الخشبي, بديل الرخام, الديكورات الداخلية, تصميم وتنفيذ ديكورات عصرية, تكسيات جدارية, أسقف معلقة وتصاميم جبسية, خدمات إضافية, تركيب الشاشات, تركيب قواعد الشاشات, أعمال الصيانة المنزلية المتنوعة, رواد المستقبل, جدة" />
+      </Helmet>
       
       {/* 1. Hero Section */}
       <section className="relative pt-32 pb-40 overflow-hidden flex items-center justify-center min-h-[85vh]">
