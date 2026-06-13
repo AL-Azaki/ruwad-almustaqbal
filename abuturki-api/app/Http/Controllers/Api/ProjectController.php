@@ -5,9 +5,22 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use Cloudinary\Configuration\Configuration;
+use Cloudinary\Api\Upload\UploadApi;
 
 class ProjectController extends Controller
 {
+    public function __construct()
+    {
+        Configuration::instance([
+            'cloud' => [
+                'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+                'api_key' => env('CLOUDINARY_API_KEY'),
+                'api_secret' => env('CLOUDINARY_API_SECRET')
+            ],
+            'url' => ['secure' => true]
+        ]);
+    }
     public function index()
     {
         $projects = Project::orderBy('created_at', 'desc')->get();
@@ -26,8 +39,17 @@ class ProjectController extends Controller
 
         $imagePath = null;
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('projects', 'public');
-            $imagePath = '/storage/' . $path;
+            try {
+                $upload = (new UploadApi())->upload($request->file('image')->getRealPath(), [
+                    'folder' => 'projects',
+                    'resource_type' => 'auto'
+                ]);
+                $imagePath = $upload['secure_url'];
+            } catch (\Exception $e) {
+                // If Cloudinary fails (e.g. invalid credentials), fallback to local for testing
+                $path = $request->file('image')->store('projects', 'public');
+                $imagePath = '/storage/' . $path;
+            }
         } elseif (!empty($validated['image_url'])) {
             $imagePath = $validated['image_url'];
         }
@@ -58,8 +80,16 @@ class ProjectController extends Controller
         $project = Project::findOrFail($id);
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('projects', 'public');
-            $project->image_path = '/storage/' . $path;
+            try {
+                $upload = (new UploadApi())->upload($request->file('image')->getRealPath(), [
+                    'folder' => 'projects',
+                    'resource_type' => 'auto'
+                ]);
+                $project->image_path = $upload['secure_url'];
+            } catch (\Exception $e) {
+                $path = $request->file('image')->store('projects', 'public');
+                $project->image_path = '/storage/' . $path;
+            }
         } elseif (!empty($validated['image_url'])) {
             $project->image_path = $validated['image_url'];
         }
