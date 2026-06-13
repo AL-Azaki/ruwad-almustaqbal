@@ -61,6 +61,9 @@ RUN mkdir -p storage/framework/cache
 RUN mkdir -p storage/framework/sessions
 RUN mkdir -p storage/framework/views
 
+# Link storage
+RUN php artisan storage:link
+
 # Set permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
 RUN chmod -R 775 storage bootstrap/cache
