@@ -226,19 +226,32 @@ export default function AdminProjects() {
           
           return (
           <div key={project.id} className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-md rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group flex flex-col">
-            <div className="h-56 bg-gray-100 dark:bg-gray-900 relative overflow-hidden">
+            <div className="h-56 bg-gray-100 dark:bg-gray-900 relative overflow-hidden group/media">
               {imageUrl ? (
                 isVideo ? (
-                  <video src={imageUrl} controls playsInline className="w-full h-full object-contain bg-black" />
+                  <video src={imageUrl} controls playsInline className="w-full h-full object-contain bg-black" onError={(e) => {
+                    const target = e.target as HTMLVideoElement;
+                    target.style.display = 'none';
+                    if (target.nextElementSibling) {
+                      (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                    }
+                  }} />
                 ) : (
-                  <img src={imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={imageUrl} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    if (target.nextElementSibling) {
+                      (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                    }
+                  }} />
                 )
-              ) : (
-                <div className="w-full h-full flex flex-col items-center justify-center text-gray-400">
-                  <ImageIcon className="w-10 h-10 mb-3 text-gray-300 dark:text-gray-600 transition-transform duration-500 group-hover:scale-110" />
-                  <span className="text-sm font-medium">{(t('portfolio.comingSoon') || 'No Image')}</span>
-                </div>
-              )}
+              ) : null}
+              
+              {/* Fallback Icon (Shown if no URL, or if image fails to load) */}
+              <div className={`w-full h-full flex flex-col items-center justify-center text-gray-400 ${imageUrl ? 'hidden' : 'flex'}`}>
+                <ImageIcon className="w-10 h-10 mb-3 text-gray-300 dark:text-gray-600 transition-transform duration-500 group-hover:scale-110" />
+                <span className="text-sm font-medium">{(t('portfolio.comingSoon') || 'No Image')}</span>
+              </div>
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
               

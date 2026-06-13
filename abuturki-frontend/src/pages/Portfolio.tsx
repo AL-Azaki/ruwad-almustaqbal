@@ -108,19 +108,34 @@ export default function Portfolio() {
                       controls 
                       playsInline 
                       className="w-full h-full object-contain bg-black"
+                      onError={(e) => {
+                        const target = e.target as HTMLVideoElement;
+                        target.style.display = 'none';
+                        if (target.nextElementSibling) {
+                          (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                        }
+                      }}
                     />
                   ) : (
                     <img 
                       src={imageUrl} 
                       alt={project.title} 
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.nextElementSibling) {
+                          (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                        }
+                      }}
                     />
                   )
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500 font-medium">
-                    {t('portfolio.comingSoon')}
-                  </div>
-                )}
+                ) : null}
+                
+                {/* Fallback View */}
+                <div className={`w-full h-full flex items-center justify-center text-gray-400 dark:text-gray-500 font-medium ${imageUrl ? 'hidden' : 'flex'}`}>
+                  {t('portfolio.comingSoon')}
+                </div>
                 
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80 transition-opacity duration-300 pointer-events-none"></div>

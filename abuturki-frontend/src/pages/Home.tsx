@@ -271,15 +271,28 @@ export default function Home() {
                 <Link to="/portfolio" key={i} className="relative w-72 sm:w-80 h-56 rounded-3xl overflow-hidden shadow-xl shrink-0 snap-center group/card block border border-white/20 dark:border-gray-700">
                   {imageUrl ? (
                     isVideo ? (
-                      <video src={imageUrl} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110 pointer-events-none" />
+                      <video src={imageUrl} autoPlay loop muted playsInline className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110 pointer-events-none" onError={(e) => {
+                        const target = e.target as HTMLVideoElement;
+                        target.style.display = 'none';
+                        if (target.nextElementSibling) {
+                          (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                        }
+                      }} />
                     ) : (
-                      <img src={imageUrl} alt={project.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" />
+                      <img src={imageUrl} alt={project.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.nextElementSibling) {
+                          (target.nextElementSibling as HTMLElement).style.display = 'flex';
+                        }
+                      }} />
                     )
-                  ) : (
-                    <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400">
-                      <ImageIcon className="w-10 h-10" />
-                    </div>
-                  )}
+                  ) : null}
+                  
+                  {/* Fallback Icon */}
+                  <div className={`w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-400 ${imageUrl ? 'hidden' : 'flex'}`}>
+                    <ImageIcon className="w-10 h-10" />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-90 pointer-events-none"></div>
                   
                   <div className="absolute bottom-0 left-0 right-0 p-5 text-right pointer-events-none">
